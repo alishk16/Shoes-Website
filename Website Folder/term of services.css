@@ -1,0 +1,14 @@
+.term-container {
+  width: 700px;
+  margin: 0 auto;
+  line-height: 1.5;
+}
+.unorder-list {
+  display: flex;
+  flex-direction: column;
+}
+.term-heading {
+  color: #7c40ff;
+  margin-bottom: 30px;
+  display: block;
+}

@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Footz</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+  <body>
+    <div class="bar container">
+      <div class="logo-bar">
+        <a href="Home.html"><img src="logo.png" class="logo" alt="" /> </a>
+        <div class="search">
+          <input
+            type="text"
+            placeholder=" Search for brand,colour, etc."
+            name="search"
+          />
+          <svg
+            class="search-icon"
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            fill="#000000"
+            viewBox="0 0 256 256"
+          >
+            <rect width="256" height="256" fill="none"></rect>
+            <circle
+              cx="116"
+              cy="116"
+              r="84"
+              fill="none"
+              stroke="#000000"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="16"
+            ></circle>
+            <line
+              x1="175.4"
+              y1="175.4"
+              x2="224"
+              y2="224"
+              fill="none"
+              stroke="#000000"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="16"
+            ></line>
+          </svg>
+        </div>
+      </div>
+      <!UNORDER LIST>
+      <div class="list-cart">
+        <ul>
+          <li><a href="Products.html">Products</a></li>
+          <li><a href="News.html">News</a></li>
+          <li><a href="About.html">About</a></li>
+          <li><a href="Help.html">help</a></li>
+        </ul>
+        <svg
+          class="cart-logo"
+          xmlns="http://www.w3.org/2000/svg"
+          width="30"
+          height="30"
+          fill="#000000"
+          viewBox="0 0 256 256"
+        >
+          <rect width="256" height="256" fill="none"></rect>
+          <path
+            d="M184,184H69.8L41.9,30.6A8,8,0,0,0,34.1,24H16"
+            fill="none"
+            stroke="#000000"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="16"
+          ></path>
+          <circle
+            cx="80"
+            cy="204"
+            r="20"
+            fill="none"
+            stroke="#000000"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="16"
+          ></circle>
+          <circle
+            cx="184"
+            cy="204"
+            r="20"
+            fill="none"
+            stroke="#000000"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="16"
+          ></circle>
+          <path
+            d="M62.5,144H188.1a15.9,15.9,0,0,0,15.7-13.1L216,64H48"
+            fill="none"
+            stroke="#000000"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="16"
+          ></path>
+        </svg>
+      </div>
+    </div>
+    <!........... slideshow-container..........>
+    <div class="slideshow-container container">
+      <div class="mySlides fade">
+        <img src="1.jpg" style="width: 112%" class="image1" />
+      </div>
+
+      <div class="mySlides fade">
+        <img src="2.jpg" style="width: 112%" class="image1" />
+      </div>
+
+      <div class="mySlides fade">
+        <img src="3.png" style="width: 112%" class="image1" />
+      </div>
+
+      <a class="prev" onclick="plusSlides(-1)">❮</a>
+      <a class="next" onclick="plusSlides(1)">❯</a>
+    </div>
+    <br />
+
+    <div style="text-align: center">
+      <span class="dot" onclick="currentSlide(1)"></span>
+      <span class="dot" onclick="currentSlide(2)"></span>
+      <span class="dot" onclick="currentSlide(3)"></span>
+      <span class="dot" onclick="currentSlide(4)"></span>
+    </div>
+    <script>
+      let slideIndex = 0;
+      showSlides();
+
+      function showSlides() {
+        let i;
+        let slides = document.getElementsByClassName("mySlides");
+        let dots = document.getElementsByClassName("dot");
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+        }
+        slideIndex++;
+        if (slideIndex > slides.length) {
+          slideIndex = 1;
+        }
+        for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex - 1].style.display = "block";
+        dots[slideIndex - 1].className += " active";
+        setTimeout(showSlides, 2500); // Change image every 2 seconds
+      }
+    </script>
+
+    <!..............Products.......>
+    <h1>Trending</h1>
+    <div class="flex-container container">
+      <div class="first-line-flex flex-margin">
+        <div class="box1 same-w">
+          <img src="Shoes/s1.jpg" alt="" class="flex-images" />
+          <p class="names">adidas Yeezy 700 V3 Azael</p>
+          <h3>$300</h3>
+        </div>
+        <!-- Box2 -->
+        <div class="box1 same-w">
+          <img src="Shoes/s2.jpg" alt="" class="flex-images" />
+          <p class="names">Nike Air Force 1 High OG QS University Blue</p>
+          <h3>$300</h3>
+        </div>
+        <!-- Box 3 -->
+        <div class="box1 same-w">
+          <img src="Shoes/s3.jpg" alt="" class="flex-images" />
+          <p class="names">adidas Yeezy Boost 350 V2 Core Black Red</p>
+          <h3>$300</h3>
+        </div>
+        <!-- Box 4 -->
+        <div class="box1 same-w">
+          <img src="Shoes/s4.jpg" alt="" class="flex-images" />
+          <p class="names">Jordan 4 Retro Midnight Navy</p>
+          <h3>$300</h3>
+        </div>
+      </div>
+      <!-- second-box-1 -->
+      <div class="second-line-flex flex-margin">
+        <div class="box1 same-w">
+          <img src="Shoes/s5.jpg" alt="" class="flex-images" />
+          <p class="names">adidas Yeezy Wave Runner 700 Solid Grey</p>
+          <h3>$300</h3>
+        </div>
+        <!-- second-Box2 -->
+        <div class="box1 same-w">
+          <img src="Shoes/s6.jpg" alt="" class="flex-images" />
+          <p class="names">adidas Yeezy Slide Bone</p>
+          <h3>$300</h3>
+        </div>
+        <!--second-Box 3 -->
+        <div class="box1 same-w">
+          <img src="Shoes/s7.jpg" alt="" class="flex-images" />
+          <p class="names">adidas Yeezy Boost 700 V2 Vanta</p>
+          <h3>$300</h3>
+        </div>
+        <!-- second-Box 4 -->
+        <div class="box1 same-w">
+          <img src="Shoes/s8.jpg" alt="" class="flex-images" />
+          <p class="names">
+            Nike Air Force 1 Low '07 QS Purple Skeleton Halloween
+          </p>
+          <h3>$300</h3>
+        </div>
+      </div>
+
+      <!-- thrid-box-1 -->
+      <div class="third-line-flex flex-margin">
+        <div class="box1 same-w">
+          <img src="Shoes/s9.jpg" alt="" class="flex-images" />
+          <p class="names">Nike Air Max Triple White Wolf Grey</p>
+          <h3>$300</h3>
+        </div>
+        <!-- third-Box2 -->
+        <div class="box1 same-w">
+          <img src="Shoes/s10.jpg" alt="" class="flex-images" />
+          <p class="names">Jordan 1 Mid Ice Blue (GS)</p>
+          <h3>$300</h3>
+        </div>
+        <!--third-Box 3 -->
+        <div class="box1 same-w">
+          <img src="Shoes/s11.jpg" alt="" class="flex-images" />
+          <p class="names">Jordan 9 Retro Particle Grey</p>
+          <h3>$300</h3>
+        </div>
+        <!-- thied-Box 4 -->
+        <div class="box1 same-w">
+          <img src="Shoes/s12.jpg" alt="" class="flex-images" />
+          <p class="names">Nike Hot Step Air Terra Drake NOCTA Black Yellow</p>
+          <h3>$300</h3>
+        </div>
+      </div>
+
+      <!-- fourth-box-1 -->
+      <div class="fourth-line-flex flex-margin">
+        <div class="box1 same-w">
+          <img src="Shoes/s13.jpg" alt="" class="flex-images" />
+          <p class="names">Nike Air Force 1 Low Flax</p>
+          <h3>$300</h3>
+        </div>
+        <!-- fourth-Box2 -->
+        <div class="box1 same-w">
+          <img src="Shoes/s14.jpg" alt="" class="flex-images" />
+          <p class="names">Gucci GG Marmont Belt Shiny Buckle</p>
+          <h3>$300</h3>
+        </div>
+        <!--fourth-Box 3 -->
+        <div class="box1 same-w">
+          <img src="Shoes/s15.jpg" alt="" class="flex-images" />
+          <p class="names">Jordan 13 Retro Gym Red Flint Grey</p>
+          <h3>$300</h3>
+        </div>
+        <!-- fourth-Box 4 -->
+        <div class="box1 same-w">
+          <img src="Shoes/s16.jpg" alt="" class="flex-images" />
+          <p class="names">Yeezy Supply Neoprene Slipper Black</p>
+          <h3>$300</h3>
+        </div>
+      </div>
+      <div class="fourth-line-flex flex-margin">
+        <div class="box1 same-w">
+          <img src="Shoes/s17.jpg" alt="" class="flex-images" />
+          <p class="names">Gucci Slides Bloom Supreme</p>
+          <h3>$300</h3>
+        </div>
+        <!-- fourth-Box2 -->
+        <div class="box1 same-w">
+          <img src="Shoes/s18.jpg" alt="" class="flex-images" />
+          <p class="names">GG belt with Double G buckle</p>
+          <h3>$300</h3>
+        </div>
+        <!--fourth-Box 3 -->
+        <div class="box1 same-w">
+          <img src="Shoes/s19.jpg" alt="" class="flex-images" />
+          <p class="names">Vans Old Skool Black White</p>
+          <h3>$300</h3>
+        </div>
+        <!-- fourth-Box 4 -->
+        <div class="box1 same-w">
+          <img src="Shoes/s20.jpg" alt="" class="flex-images" />
+          <p class="names">
+            Louis Vuitton LV Initiales Reversible Belt Monogram Eclipse Taiga
+          </p>
+          <h3>$300</h3>
+        </div>
+      </div>
+      <div class="fourth-line-flex flex-margin">
+        <div class="box1 same-w">
+          <img src="Shoes/s21.jpg" alt="" class="flex-images" />
+          <p class="names">Supra Factor Call of Duty Black Ops 4</p>
+          <h3>$300</h3>
+        </div>
+        <!-- fourth-Box2 -->
+        <div class="box1 same-w">
+          <img src="Shoes/s22.jpg" alt="" class="flex-images" />
+          <p class="names">
+            Louis Vuitton Reversible Belt Initiales Monogram Eclipse Reverse
+          </p>
+          <h3>$300</h3>
+        </div>
+        <!--fourth-Box 3 -->
+        <div class="box1 same-w">
+          <img src="Shoes/s23.jpg" alt="" class="flex-images" />
+          <p class="names">Supreme Repeat Leather Belt Black</p>
+          <h3>$300</h3>
+        </div>
+        <!-- fourth-Box 4 -->
+        <div class="box1 same-w">
+          <img src="Shoes/s24.jpg" alt="" class="flex-images" />
+          <p class="names">Nike Air More Uptempo Black White</p>
+          <h3>$300</h3>
+        </div>
+      </div>
+    </div>
+    <!............footer...........>
+    <div class="footer">
+      <div class="footer-details">
+        <img src="logo2.png" class="footer-logo" />
+        <div class="social-logos">
+          <p class="social-media">Find Us on Social</p>
+          <a href="#" class="fa fa-facebook"></a>
+          <a href="#" class="fa fa-twitter"></a>
+          <a href="#" class="fa fa-google"></a>
+          <a href="#" class="fa fa-linkedin"></a>
+        </div>
+      </div>
+      <div class="second-f2">
+        <h3>Support</h3>
+        <a href="Help.html" class="contect-us">Contact Us</a>
+        <a href="News.html" class="contect-us">Blog</a>
+        <a href="FAQ.html" class="contect-us">FAQ</a>
+        <a href="term of services.html " class="contect-us">Term of services</a>
+        <a href="refund policy.html" class="contect-us">Refund Policy</a>
+      </div>
+      <div class="third-f3">
+        <h3>Recent Updates</h3>
+        <p>Best Sneakers Releasing</p>
+        <p>Shoe Size Conversion Charts</p>
+        <p>Air Jordan Release Dates</p>
+        <p>Yeezy Boost 700</p>
+        <p>Nike Air Force 1</p>
+      </div>
+      <div class="fourth-f4">
+        <p>©2022 Footz. All Rights Reserved.</p>
+      </div>
+    </div>
+  </body>
+</html>
